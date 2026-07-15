@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Discount Calculator</title>
+</head>
+<body>
+
+<h1>Discount Calculator</h1>
+
+<form method="POST">
+
+<label>Item Name</label><br>
+<input type="text" name="item" required><br><br>
+
+<label>Original Price</label><br>
+<input type="number" name="price" required><br><br>
+
+<label>Discount %</label><br>
+<input type="number" name="discount" required><br><br>
+
+<button type="submit">Calculate</button>
+
+</form>
+
+{% if item %}
+
+<hr>
+
+<h2>Result</h2>
+
+<p><b>Item:</b> {{ item }}</p>
+
+<p><b>Original Price:</b> ₹{{ price }}</p>
+
+<p><b>Discount:</b> {{ discount }}%</p>
+
+<p><b>Final Price:</b> ₹{{ final_price }}</p>
+
+{% endif %}
+
+</body>
+</html>
