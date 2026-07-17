@@ -132,5 +132,51 @@ def average():
         )
 
     return render_template("average.html")
+
+@app.route("/gst", methods=["GET", "POST"])
+def gst():
+
+    if request.method == "POST":
+
+        amount = float(request.form["amount"])
+        gst = float(request.form["gst"])
+
+        gst_amount = amount * gst / 100
+        final_amount = amount + gst_amount
+
+        return render_template(
+            "gst.html",
+            amount=amount,
+            gst_amount=gst_amount,
+            final_amount=final_amount
+        )
+
+    return render_template("gst.html")
+
+@app.route("/emi", methods=["GET", "POST"])
+def emi():
+
+    if request.method == "POST":
+
+        loan = float(request.form["loan"])
+        rate = float(request.form["rate"])
+        years = int(request.form["years"])
+
+        monthly_rate = rate / (12 * 100)
+        months = years * 12
+
+        emi = (loan * monthly_rate * (1 + monthly_rate) ** months) / ((1 + monthly_rate) ** months - 1)
+
+        total_payment = emi * months
+        total_interest = total_payment - loan
+
+        return render_template(
+            "emi.html",
+            emi=round(emi, 2),
+            total_payment=round(total_payment, 2),
+            total_interest=round(total_interest, 2)
+        )
+
+    return render_template("emi.html")
 if __name__ == "__main__":
     app.run(debug=True)
