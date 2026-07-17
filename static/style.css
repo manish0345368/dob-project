@@ -186,3 +186,68 @@ body{
     }
 
 }
+/* ===========================
+   Mobile Navbar
+=========================== */
+
+.menu-icon{
+    display:none;
+    font-size:32px;
+    color:white;
+    cursor:pointer;
+}
+
+@media (max-width:768px){
+
+    .navbar{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:15px 20px;
+        position:relative;
+    }
+
+    .logo{
+        display:flex;
+        align-items:center;
+        gap:10px;
+    }
+
+    .logo img{
+        width:45px;
+        height:45px;
+    }
+
+    .logo span{
+        font-size:24px;
+        font-weight:bold;
+    }
+
+    .menu-icon{
+        display:block;
+    }
+
+    .menu{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:75px;
+        right:20px;
+        background:#111827;
+        width:220px;
+        border-radius:10px;
+        padding:15px;
+        box-shadow:0 0 10px rgba(0,0,0,.4);
+    }
+
+    .menu a{
+        color:white;
+        padding:10px;
+        text-decoration:none;
+        border-bottom:1px solid rgba(255,255,255,.2);
+    }
+
+    .menu a:last-child{
+        border-bottom:none;
+    }
+}
