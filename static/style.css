@@ -68,3 +68,79 @@ button:hover{
 a{
     text-decoration:none;
 }
+
+/* Navbar */
+
+.navbar{
+    width:100%;
+    background:#1e3a8a;
+    color:white;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-size:17px;
+    transition:0.3s;
+}
+
+.menu a:hover{
+    color:#ffd700;
+}
+
+body{
+    padding-top:80px;
+}
+/* Navbar */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#0f172a;
+    padding:15px 40px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    color:white;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.logo img{
+    width:45px;
+    height:45px;
+    margin-right:10px;
+    border-radius:50%;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.menu a:hover{
+    background:#2563eb;
+    color:white;
+    border-radius:5px;
+    padding:5px 10px;
+}

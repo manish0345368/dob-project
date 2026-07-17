@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Average Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+<h1>📊 Average Calculator</h1>
+
+<form method="POST">
+
+<label>Enter Numbers (Comma Separated)</label><br>
+<input type="text" name="numbers" placeholder="10,20,30,40" required><br><br>
+
+<button type="submit">Calculate</button>
+
+</form>
+
+{% if total is defined %}
+
+<div class="result">
+
+<h2>Result</h2>
+
+<p><b>Total:</b> {{ total }}</p>
+
+<p><b>Count:</b> {{ count }}</p>
+
+<p><b>Average:</b> {{ average }}</p>
+
+</div>
+
+{% endif %}
+
+</div>
+
+</body>
+</html>

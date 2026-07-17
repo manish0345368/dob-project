@@ -7,6 +7,21 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+    <nav class="navbar">
+    <div class="logo">
+       <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
+        <span>Smart Calculator Hub</span>
+    </div>
+
+    <div class="menu">
+        <a href="/">Home</a>
+        <a href="/dob">DOB</a>
+        <a href="/salary">Salary</a>
+        <a href="/student">Student</a>
+        <a href="/discount">Discount</a>
+        <a href="/average">Average</a>
+    </div>
+</nav>
 
 <div class="container">
 
@@ -37,7 +52,27 @@
         <button>🛒 Discount Calculator</button>
     </a>
 
+    <br><br>
+    
+    <a href="/average">
+        <button>📊 Average Calculator</button>
+</a>
+
 </div>
 
 </body>
+<nav class="navbar">
+    <div class="logo">
+        🧮 Smart Calculator Hub
+    </div>
+
+    <div class="menu">
+        <a href="/">Home</a>
+        <a href="/dob">DOB</a>
+        <a href="/salary">Salary</a>
+        <a href="/student">Student</a>
+        <a href="/discount">Discount</a>
+        <a href="/average">Average</a>
+    </div>
+</nav>
 </html>

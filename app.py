@@ -111,5 +111,26 @@ def discount():
         )
 
     return render_template("discount.html")
+@app.route("/average", methods=["GET", "POST"])
+def average():
+
+    if request.method == "POST":
+
+        numbers = request.form["numbers"]
+
+        num_list = [float(x) for x in numbers.split(",")]
+
+        total = sum(num_list)
+        count = len(num_list)
+        average = total / count
+
+        return render_template(
+            "average.html",
+            total=total,
+            count=count,
+            average=average
+        )
+
+    return render_template("average.html")
 if __name__ == "__main__":
     app.run(debug=True)
