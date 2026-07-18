@@ -86,9 +86,13 @@ a{
 }
 
 .logo{
+    display:flex;
+    align-items:center;
+    color:white;
     font-size:24px;
     font-weight:bold;
 }
+
 
 .menu a{
     color:white;
@@ -144,48 +148,9 @@ body{
     border-radius:5px;
     padding:5px 10px;
 }
-/* Mobile Responsive */
 
-@media (max-width: 768px) {
 
-    .navbar{
-        flex-direction: column;
-        align-items: center;
-        padding: 15px;
-    }
 
-    .logo{
-        margin-bottom: 15px;
-        font-size: 24px;
-        text-align: center;
-    }
-
-    .logo img{
-        width:50px;
-        height:50px;
-    }
-
-    .menu{
-        display:flex;
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:10px;
-    }
-
-    .menu a{
-        font-size:18px;
-        padding:5px;
-    }
-
-    .container{
-        width:90%;
-    }
-
-    button{
-        width:100%;
-    }
-
-}
 /* ===========================
    Mobile Navbar
 =========================== */
@@ -199,55 +164,46 @@ body{
 
 @media (max-width:768px){
 
+    .container{
+        width:90%;
+    }
+
     .navbar{
-        display:flex;
-        justify-content:space-between;
-        align-items:center;
         padding:15px 20px;
-        position:relative;
-    }
-
-    .logo{
-        display:flex;
-        align-items:center;
-        gap:10px;
-    }
-
-    .logo img{
-        width:45px;
-        height:45px;
     }
 
     .logo span{
-        font-size:24px;
-        font-weight:bold;
+        font-size:20px;
     }
 
     .menu-icon{
         display:block;
+        font-size:30px;
     }
 
     .menu{
         display:none;
-        flex-direction:column;
         position:absolute;
-        top:75px;
-        right:20px;
-        background:#111827;
+        top:70px;
+        right:15px;
         width:220px;
+        background:#111827;
+        flex-direction:column;
         border-radius:10px;
-        padding:15px;
-        box-shadow:0 0 10px rgba(0,0,0,.4);
     }
 
     .menu a{
-        color:white;
-        padding:10px;
-        text-decoration:none;
-        border-bottom:1px solid rgba(255,255,255,.2);
+        margin:0;
+        padding:12px;
+        border-bottom:1px solid #333;
     }
 
     .menu a:last-child{
-        border-bottom:none;
+        border:none;
     }
+}
+.menu{
+    display:flex;
+    align-items:center;
+    gap:20px;
 }
